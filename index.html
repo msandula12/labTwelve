@@ -16,13 +16,14 @@
 		<h1>To-do list</h1>
 		
 		<!-- Add an input to the list -->
-		<h3>Add to list:<h3>
+		<h3>Add to list:</h3>
 		<input type="text" ng-model="main.add" placeholder="What else needs doing?">
-		<button ng-click="main.addItemToList()" id="btnAdd">Add</button>
+		<img ng-click="main.addItemToList()" id="btnAdd" src="images/plus.png" alt="Add item to to-do list">
 		<br />
 		<!-- Filter through to-do list -->
-		<h3>Filter list:<h3>
+		<h3>Filter list:</h3>
 		<input type="text" ng-model="searchThroughList" placeholder="Search for a specific task">
+		<img src="images/search.svg" id="btnSearch" alt="Filter your to-do list">
 		
 		<!-- Display to-do list -->
 		<ul>
