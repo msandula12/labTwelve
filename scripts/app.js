@@ -7,8 +7,17 @@ app.controller('myController', function(){
 		// main.add = "";
 		main.addItemToList = function(input) {
 			main.list.push(main.add);
+			return true;
 		};
-		main.removeFromList = function() {
-			main.list.pop(main.list);
+		main.remove = function(item) { 
+  			var index = main.list.indexOf(item);
+  			main.list.splice(index, 1);     
 		};
 });
+
+
+// $(document).ready(function() {
+// 	$("#btnRemove").hover(function() {
+// 			$(this).css("background-color", "#ff0000").text("remove");
+// 	});
+// });
