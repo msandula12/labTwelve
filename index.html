@@ -4,24 +4,30 @@
 	<meta charset="UTF-8">
 	<!-- CSS compiled with Stylus -->
 	<link rel="stylesheet" href="styles.css">
+
+	<!-- Google font -->
+	<link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
 	
 	<title>TO-DO LIST</title>
 </head>
 <body ng-app="myModule">
 
-	<div ng-controller="myController as main">
+	<div ng-controller="myController as main" id="toDoList">
 		<h1>To-do list</h1>
 		
 		<!-- Add an input to the list -->
-		<input type="text" ng-model="main.add">
-		<button ng-click="main.addItemToList()">Add</button>
+		<h3>Add to list:<h3>
+		<input type="text" ng-model="main.add" placeholder="What else needs doing?">
+		<button ng-click="main.addItemToList()" id="btnAdd">Add</button>
+		<br />
 		<!-- Filter through to-do list -->
-		Filter list:
-		<input type="text" ng-model="searchThroughList">
+		<h3>Filter list:<h3>
+		<input type="text" ng-model="searchThroughList" placeholder="Search for a specific task">
 		
 		<!-- Display to-do list -->
 		<ul>
-			<li ng-repeat="item in main.list | filter: searchThroughList">{{item}}</li>
+			<li ng-repeat="item in main.list | filter: searchThroughList">{{item}}<button ng-click="main.removeItemFromList()" id="btnRemove">Remove</button>
+			</li>
 		</ul>
 	</div>
 

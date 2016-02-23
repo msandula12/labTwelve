@@ -8,4 +8,7 @@ app.controller('myController', function(){
 		main.addItemToList = function(input) {
 			main.list.push(main.add);
 		};
+		main.removeFromList = function() {
+			main.list.pop(main.list);
+		};
 });
