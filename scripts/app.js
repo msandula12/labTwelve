@@ -19,12 +19,11 @@ app.controller('myController', function(){
 				alert("Please enter a task");
 			else
 				main.list.push(main.add);
-				// return true;
 		};
 		// function for removing item from list
 		main.remove = function(item) { 
   			var index = main.list.indexOf(item);
-  			main.list.splice(index, 1);     
+  			main.list.splice(index, 1);
 		};
 });
 
