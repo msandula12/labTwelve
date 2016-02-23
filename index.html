@@ -27,7 +27,7 @@
 		
 		<!-- Display to-do list -->
 		<ul>
-			<li ng-repeat="item in main.list | filter: searchThroughList">{{item}}<button ng-click="main.remove(item)" id="btnRemove">Task done?</button>
+			<li ng-repeat="item in main.list | filter: searchThroughList">{{item}}<button ng-click="main.remove(item)" class="btnRemove">Task done?</button>
 			</li>
 		</ul>
 	</div>
